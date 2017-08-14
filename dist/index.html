@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 
 <head>
 
@@ -10,6 +10,8 @@
     <meta name="author" content="">
 
     <title>SAMCELL</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,13 +55,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">Reparos e Atualizações</a>
+                        <a class="page-scroll" href="#features">Reparos e Atualizações</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#features">Compra de Produtos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Agende uma visita</a>
+                        <a class="page-scroll" href="/agendamento">Agende uma visita</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +79,7 @@
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
-                            <h1>Consertamos celulares, tablets, notebooks e aparelhos de áudio e vídeo da marca <img src="img/samsung.png" class="logo-smsg img-responsive" alt="logo-samsung"></h1>
+                            <h1>Consertamos celulares, tablets, notebooks e aparelhos de áudio e vídeo da marca <img src="img/samsung.png" class="samsung-logo img-responsive" alt="logo-samsung"></h1>
                             <a href="#download" class="btn btn-outline-blue btn-xl page-scroll">Faça um agendamento</a>
                         </div>
                     </div>
@@ -113,7 +118,7 @@
         </div>
     </section>
 
-    <section id="features" class="features">
+    <section id="download" class="features">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -184,10 +189,49 @@
             <div class="container">
                 <h2>Alguma dúvida?</h2>
                 <h3>Acesse nosso FAQ e ache a maioria das respostas que você procura.</h3>
-                <a href="#contact" class="btn btn-outline btn-xl page-scroll">FAQ</a>
+                <!-- <a href="#contact" class="btn btn-outline btn-xl page-scroll">FAQ</a> -->
+                <button type="button" class="btn btn-outline btn-xl page-scroll" data-toggle="modal" data-target="#exampleModalLong">
+                  FAQ
+                </button>
             </div>
         </div>
         <div class="overlay"></div>
+
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Política de Garantia</h4>
+                <h5 class="modal-title" id="exampleModalLongTitle">GARANTIA DE QUALIDADE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <p>
+                Você pode adquirir nossos produtos com toda a tranquilidade e a segurança que só uma grande marca como a Samsung pode garantir. Líder mundial na indústria de produtos eletrônicos, a Samsung opera em mais de 50 países. Nossos produtos têm a qualidade reconhecida através de inúmeros prêmios nos países onde são vendidos. A Samsung garante além dos melhores e mais avançados produtos, qualidade e tecnologia de ponta.
+                Ao comprar um produto Samsung, você está levando, além da mais alta tecnologia, a garantia Samsung de qualidade. Antes de chegar até você, nossos produtos passam pelos mais rigorosos testes, sendo avaliados em cada detalhe por nossos especialistas em cada área.
+                Garantia de qualidade e a tranqüilidade de estar levando o melhor!
+                Ⅰ. GARANTIA DOS PRODUTOS SAMSUNG
+                A SAMSUNG garante seus produtos contra defeitos de material e mão-de-obra, desde que mantido em condições normais de uso e manutenção.
+                A SAMSUNG, sem nenhum custo para o usuário, reparará o produto desde que este seja enviado a uma assistência técnica SAMSUNG, com os custos de transporte sob-responsabilidade do usuário, de acordo com os termos desta garantia, acompanhado da respectiva nota fiscal emitida no Brasil. O reparo, a critério da SAMSUNG, poderá incluir a substituição de peças ou placas, por novas ou recondicionadas equivalentes. Este produto e as peças substituídas serão garantidos pelo restante do prazo original. Todas as peças substituídas se tornarão propriedade da SAMSUNG.
+                Ⅱ. CONDIÇÕES DE GARANTIA
+                A SAMSUNG não assume qualquer obrigação ou responsabilidade por acréscimos ou modificações desta garantia, salvo se efetuadas por escrito em caráter oficial. Exceto se houver contrato escrito separado entre a SAMSUNG e o usuário, a garantia não cobre a instalação do equipamento nem como danos decorrentes da instalação inadequada.
+                Ⅲ. ITENS EXCLUÍDOS DESTA GARANTIA
+                A garantia não cobre: (a) Defeitos ou danos resultantes do uso anormal do produto pelo cliente, como superfícies plásticas e outras peças expostas externamente arranhadas trincadas ou quebradas, limpeza em desacordo com o Manual de Instruções, bem como derramamento de alimentos ou líquidos de qualquer natureza; (b) Defeitos ou danos decorrentes de testes, instalação, alteração, modificação de qualquer espécie em nossos produtos, bem como o reparo realizado por outras oficinas que não sejam Autorizadas SAMSUNG para este produto; (c) Quebra ou danos que não foram constatados no ato da aquisição (gabinete, cabos, etc.); (d) Produtos que tenham tido o número de série removido, adulterado ou tornado ilegível; (e) Defeitos e danos decorrentes da utilização de componentes não compatíveis com o produto SAMSUNG (gabinete, cabos, placas, peças em geral, etc.); (f) Defeitos e danos causados por agentes naturais (enchente, maresia, descarga elétrica e outros) ou exposição excessiva ao calor; (g)Defeitos e danos causados pelo uso de software e(ou) hardware não compatíveis com as especificações dos produtos SAMSUNG; (h) Desempenho insatisfatório do produto devido a instalação em local inadequado ou rede elétrica e cabo de sinal; (i) Peças que se desgastam naturalmente com o uso regular, tais como cabos, lâmpadas de mostrador, etc.
+                Ⅳ. CONSIDERAÇÕES GERAIS
+                Esta garantia substitui todas as outras garantias expressas ou tácitas, incluindo sem limitação, garantias tácitas de comercialização e adequação a um fim específico. Em hipótese alguma a SAMSUNG será responsável por indenização superior ao preço da compra do produto, por qualquer perda de uso, perda de tempo, inconveniência, prejuízo comercial, perda de lucros ou economias, por outros danos diretos ou indiretos, decorrentes do uso ou impossibilidade de uso do produto. Esta garantia fica automaticamente cancelada na ocorrência de qualquer uma das hipóteses do item III.
+                Período de Garantia por Produto
+                A política de garantia dos produtos Samsung é diferenciada para as diversas linhas de produtos, contados a partir da data da Nota Fiscal de Venda ao consumidor, conforme o quadro abaixo:
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 
     <section id="contact" class="contact bg-primary">
