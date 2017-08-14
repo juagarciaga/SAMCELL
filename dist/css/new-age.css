@@ -28,7 +28,7 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: red;
+  color: #17468f;
 }
 a:hover,
 a:focus {
@@ -57,6 +57,9 @@ p {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+}
+nav.internas {
+  background-color: #17468f;
 }
 .navbar-default {
   background-color: white;
@@ -159,9 +162,6 @@ header {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #17468f;
 }
-header .logo-smsg {
-  width: 45%;
-}
 header .header-content {
   text-align: center;
   padding: 150px 0 50px;
@@ -183,6 +183,14 @@ header .header-content .header-content-inner .list-badges {
 header .header-content .header-content-inner .list-badges img {
   height: 50px;
   margin-bottom: 25px;
+}
+header .header-content .header-content-inner .samsung-logo {
+  width: 45%;
+}
+@media (max-width: 768px) {
+  header .header-content .header-content-inner .samsung-logo {
+    margin: 0 auto;
+  }
 }
 header .device-container {
   max-width: 300px;
@@ -256,36 +264,46 @@ section.download .badges .badge-link img {
     font-size: 50px;
   }
 }
-section.features .section-heading {
+section.features .section-heading,
+.agendamento .section-heading {
   margin-bottom: 100px;
 }
-section.features .section-heading h2 {
+section.features .section-heading h2,
+.agendamento .section-heading h2 {
   margin-top: 0;
 }
-section.features .section-heading p {
+section.features .section-heading p,
+.agendamento .section-heading p {
   margin-bottom: 0;
 }
 section.features .device-container,
-section.features .feature-item {
+.agendamento .device-container,
+section.features .feature-item,
+.agendamento .feature-item {
   max-width: 300px;
   margin: 0 auto;
 }
-section.features .device-container {
+section.features .device-container,
+.agendamento .device-container {
   margin-bottom: 100px;
 }
 @media (min-width: 992px) {
-  section.features .device-container {
+  section.features .device-container,
+  .agendamento .device-container {
     margin-bottom: 0;
   }
 }
-section.features .feature-item {
+section.features .feature-item,
+.agendamento .feature-item {
   text-align: center;
   margin-bottom: 100px;
 }
-section.features .feature-item h3 {
+section.features .feature-item h3,
+.agendamento .feature-item h3 {
   font-size: 30px;
 }
-section.features .feature-item i {
+section.features .feature-item i,
+.agendamento .feature-item i {
   font-size: 80px;
   background: -webkit-linear-gradient(to left, #ececec, #2b519d);
   background: linear-gradient(to left, #ececec, #2b519d);
@@ -294,7 +312,9 @@ section.features .feature-item i {
 }
 @media (min-width: 992px) {
   section.features .device-container,
-  section.features .feature-item {
+  .agendamento .device-container,
+  section.features .feature-item,
+  .agendamento .feature-item {
     max-width: none;
   }
 }
@@ -418,6 +438,7 @@ footer ul li a.active {
   padding-left: 0;
 }
 .btn-outline {
+  background-color: transparent;
   color: white;
   border-color: white;
   border: 1px solid;
