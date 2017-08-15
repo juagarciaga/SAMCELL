@@ -29,6 +29,7 @@
     <!-- Theme CSS -->
     <!-- <link href="css/new-age.css" rel="stylesheet"> -->
     <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -36,6 +37,15 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+    function hello() {
+      $("#formOS").toggle();
+    }
+    </script>
 
 </head>
 
@@ -55,10 +65,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#features">Reparos e Atualizações</a>
+                        <a class="page-scroll" href="#servicos">Reparos e Atualizações</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#features">Compra de Produtos</a>
+                        <a class="page-scroll" href="#compra">Compra de Produtos</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="/agendamento">Agende uma visita</a>
@@ -71,7 +81,7 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>
+    </nav>    
 
     <header>
         <div class="container">
@@ -97,29 +107,80 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="download" class="download bg-primary text-center">
+    <div class="fixed-action">
+        <button class="fixed-button wobble" onclick="hello()" type="button" data-toggle="tooltip" title="Deseja saber o status do seu aparelho?">
+          <i class="fa fa-comments-o fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="col-xs-2 fixed-action" id="formOS" style="display:none;">
+            <form>
+                <p class="text-center">Deseja saber o status do seu aparelho?</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="usr" name="OS" placeholder="digite seu OS">
+                </div>
+                <button type="submit" class="btn btn-primary">Procurar</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="vantagens" class="vantagens bg-primary text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Algumas vantagens vocÊ só tem no Serviço da Samcell.</h2>
-                    <h3>Agende. Acompanhe. Comprove</h3>
-                    <p>Agendamento de horário</p>
-                    <p>Atendimento direto com o técnico</p>
-                    <p>Orçamento na hora</p>
-                    <p>Acompanhamento de Serviços</p>
-                    <p>Revisão com preço fixo</p>
+                    <h2 class="section-heading">Algumas vantagens você só tem no Serviço da Samcell.</h2>
+                    <h3 class="animated bounceInLeft">Agende. Acompanhe. Comprove</h3>
+                    <div class="col-xs-4 col-xs-offset-2 no-padding">
+                        <div class="col-xs-4 no-padding">
+                            <i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 no-padding">
+                            <p>Agendamento de horário</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 no-padding">
+                        <div class="col-xs-4 no-padding">
+                            <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 no-padding">
+                            <p>Atendimento direto com o técnico</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="col-xs-4 no-padding">
+                            <i class="fa fa-calculator fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 no-padding">
+                            <p>Orçamento na hora</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="col-xs-4 no-padding">
+                            <i class="fa fa-search fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 no-padding">
+                            Acompanhamento de Serviços
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="col-xs-4 no-padding">
+                            <i class="fa fa-usd fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-xs-8 no-padding">
+                            Revisão com preço fixo
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="download" class="features">
+    <section id="servicos" class="features">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -185,7 +246,7 @@
         </div>
     </section>
 
-    <section id="download" class="download bg-primary text-center">
+    <section id="compras" class="download bg-primary text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
