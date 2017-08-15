@@ -100,7 +100,7 @@ nav.internas{
         background-color: transparent;
         border-color: transparent;
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
+            color: fade(@theme-primary, 70%);
             &:hover,
             &:focus {
                 color: white;
@@ -108,26 +108,26 @@ nav.internas{
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: fade(@theme-primary, 70%);
             &:hover {
                 color: white;
             }
         }
         &.affix {
             background-color: white;
-            border-color: fade(@gray-darker, 10%);
+            border-color: fade(@theme-primary, 10%);
             .navbar-header .navbar-brand {
-                color: @gray-darker;
+                color: @theme-primary;
                 &:hover,
                 &:focus {
-                    color: @theme-primary;
+                    color: @theme-fifth;
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @gray-darker;
+                color: @theme-primary;
                 &:hover {
-                    color: @theme-primary;
+                    color: @theme-fifth;
                 }
             }
         }
@@ -212,6 +212,10 @@ header {
 
 // Sections
 
+.no-padding{
+    padding: 0;
+}
+
 section {
     padding: 100px 0;
     h2 {
@@ -249,7 +253,129 @@ section.download {
     }
 }
 
-section.features, .agendamento {
+.fixed-action {
+    border: none;
+    outline: none;
+    position: fixed;
+    bottom: 0px;
+    right: 15px;
+    z-index: 100;
+    background-color: white;
+    bottom: 17%;
+    border-radius: 2%;
+    box-shadow: 1px 3px 5px @gray-light;
+
+    form {
+        padding: 3% 0 6%;
+        input {
+            width: 100%;
+        }
+        button {
+            margin: 5% 20% 0;
+        }
+    }
+}
+
+.fixed-button {
+  background-color: @theme-secondary;
+  color: @theme-primary;
+  border: none;
+  outline: none;
+  position: fixed;
+  bottom: 0px;
+  right: 15px;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  box-shadow: 1px 3px 5px @gray-light;
+}
+
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    -ms-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+section.vantagens {
+    padding: 150px 0;
+    position: relative;
+    h2 {
+        margin-top: 0;
+        font-size: 50px;
+    }
+    h3 {
+        font-style: italic;
+        color: @theme-fifth;
+        font-weight: 500;
+    }
+    .col-xs-4, .col-xs-6 {
+        margin-top: 2%;
+        i {
+            color: @theme-fifth;
+            border-right: 2px solid @theme-fifth;
+            padding-right: 25%;
+            background: -webkit-linear-gradient(to left, @theme-secondary, @theme-fifth);
+              background: linear-gradient(to left, @theme-secondary, @theme-fifth);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+        }
+    }
+    @media(min-width: 768px) {
+        h2 {
+            font-size: 50px;
+        }
+    }
+}
+
+section.contato {
+    h2{
+        color: @theme-primary;    
+    }
+    b{
+        color: @theme-primary;    
+    }
+}
+
+section.features, .agendamento, .contato {
     .section-heading {
         h2 {
             margin-top: 0;
@@ -278,8 +404,8 @@ section.features, .agendamento {
         }
         i {
             font-size: 80px;
-              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
+              background: -webkit-linear-gradient(to left, @theme-fifth , @theme-tertiary);
+              background: linear-gradient(to left, @theme-fifth , @theme-tertiary);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
         }
